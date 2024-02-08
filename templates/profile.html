@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="static/base.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="static/favicon.png">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>Welcome, {{ account[0] }}!</h1>
+    <p>Your searches: {{ account[4] }}</p>
+    <form method="post" action="/profile">
+      <label for="engine">Search Engine:</label><br>
+      <select name="engine" id="engine" onchange="this.form.submit()">
+        <option value="Google" {{ chosen[0] }}>Google</option>
+        <option value="Ecosia"  {{ chosen[1] }}>Ecosia</option>
+        <option value="Duck+duck+go"  {{ chosen[2] }}>Duck Duck Go</option>
+        <option value="You.com"  {{ chosen[3] }}>You.com</option>
+        <option value="Ask.com"  {{ chosen[4] }}>Ask.com</option>
+        <option value="AOL"  {{ chosen[5] }}>AOL</option>
+        <option value="Yahoo"  {{ chosen[6] }}>Yahooo</option>
+        <option value="Bing"  {{ chosen[7] }}>Bing</option>
+      </select>
+    </form>
+    <br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
