@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="static/base.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="static/favicon.png">
+    <title>Account Login</title>
+</head>
+<body>
+    <h1>Account Login</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" action="/login">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+  <p>Did you mean to <a href="/create_account">make an account</a>?</p>
+</body>
+</html>
