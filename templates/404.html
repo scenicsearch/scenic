@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>404 Error</title>
+  <link href="static/404.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="static/favicon.png">
+</head>
+
+<body>
+  <script>
+    let imgurl = `https://source.unsplash.com/random/${screen.width}x${screen.height}/?beautiful,nature,scene,natural`;
+
+    function imgRef() {
+      main.style.backgroundImage = "url(imgurl)";
+    }
+
+  </script>
+  <a href="/"><img src="static/logo.png" class="logo" alt="Scenic"></a>
+  <div class="center">
+    <h1 id="message">Looks like you're lost...</h1>
+    <p>Let's get you <a href="https://scenic.drexperiment.repl.co/">home</a>.</p>
+    <p>404 Error | Page not found</p>
+  </div>
+  <script>
+    const texts = ["Looks like you're lost...", "You shouldn't be here...", "This isn't where you should be...", "Nothing to see here...", "There isn't anything interesting here...", "This is an ex-page...", "Are you sure you should be here?", "You're not in the right place..."];;
+    text = texts[Math.floor(Math.random() * texts.length)];
+    document.getElementById("message").innerHTML = text;
+  </script>
+</body>
+</html>
